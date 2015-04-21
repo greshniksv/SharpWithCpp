@@ -53,7 +53,8 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(SolutionDir)Debug\MD5Library.dll" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent>copy "$(SolutionDir)Debug\MD5Library.dll" "$(ProjectDir)bin\Debug\"
+copy "$(SolutionDir)Release\MD5Library.dll" "$(ProjectDir)bin\Release\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

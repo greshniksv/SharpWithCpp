@@ -11,10 +11,10 @@ namespace SharpWithCpp
 	class Program
 	{
 		[DllImport(@"MD5Library.DLL", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Auto)]
-		public static extern IntPtr GetMd5([MarshalAs(UnmanagedType.LPStr)]string arg);
+		public static extern IntPtr GetMd5([MarshalAs(UnmanagedType.LPStr)]string arg, int count);
 
 		static void Main(string[] args) {
-			IntPtr ptr = GetMd5("blabla");
+			IntPtr ptr = GetMd5("blabla",100000);
 			Console.WriteLine("Result: " + PtrToStringUtf8(ptr));
 
 			Console.ReadKey();
